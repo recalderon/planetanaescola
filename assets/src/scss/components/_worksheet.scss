@@ -1,0 +1,32 @@
+body{
+    background-color: #F1F3F5;
+}
+#title-wrapper{
+    h2{
+       // border-bottom: #0dc1da solid 5px;
+    }
+    hr.title-separator{
+        --bs-border-color: #00C5C8;
+        opacity: 1;
+    }
+}
+
+.pratica_leiamais {
+    color: #0dc1da;
+    text-decoration: none !important;
+}
+
+.pp_author, .pp_date, .pp_table-contents-title{
+    color: #0dc1da;
+}
+
+.pp_documentario{
+    .pp_doc_heading{
+        color: #0dc1da;
+    }
+    .pp_doc_duracao, .pp_doc_indicacao, .pp_doc_direcao, .pp_doc_titulo{
+        & span:first-of-type{
+            color: #0dc1da;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+
+@charset "UTF-8";
+
+// 1. Base stuff
+@import
+  'base/variables',
+  'base/base';
+
+// 2. Layout-related sections
+@import
+  'layout/header',
+  'layout/footer';
+
+// 3. Components
+@import
+  'components/buttons',
+  'components/documentary',
+  'components/documentary',
+  'components/swiper',
+  'components/worksheet';
+
+// 4. Page-specific styles
+@import
+  'pages/home';
