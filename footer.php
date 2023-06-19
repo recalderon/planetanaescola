@@ -9,33 +9,33 @@
  * @package WP_Bootstrap_Starter
  */
 
-if(!is_page_template( 'blank-page.php' ) && !is_page_template( 'blank-page-with-container.php' )): ?>
+?>
+	</div><!-- #content -->
+</main>
+<?php if(!is_page_template( 'blank-page.php' ) && !is_page_template( 'blank-page-with-container.php' )): ?>
     <?php get_template_part( 'footer-widget' ); ?>
-	<footer  role="contentinfo">
-		<section id="cta_register">
+	<footer id="footer">
+		<?php if(!is_user_logged_in()){?>
+		<section id="cta_register" class="footer-sticky">
 			<div class="bg-white py-2 px-4 small">
 				<div class="d-flex flex-row align-items-center">
 					<div class="flex-grow-1 text-uppercase fw-bold">
 						<?php
-							$settings = pods('configuracoes_de_tema');
-							$texto = $settings->field('cta_left');
-							echo $texto;
+							echo get_theme_mod( 'pne_footer--cta-message', '' );
 						?>
-					</div>
-					<?php $botao = $settings->field('cta_right_button');?>
-					<button type="button" class="btn btn-primary btn-sm"><?php echo $botao; ?></button>
+					</div>?>
+					<a class="btn btn-primary" href="<?php echo esc_url( wp_login_url() ); ?>"><?php echo get_theme_mod( 'pne_footer--cta-botao', '' ); ?></a>
 				</div>
 			</div>
 		</section>
-		<section id="footer">
+		<?php } ?>
+		<section id="pne_footer">
 			<div class="d-flex w-100 flex-row py-2 px-4">
 				© <?php echo get_the_date('Y'); ?> Planeta Na Escola
 			</div>
 		</section>
 	</footer>
 <?php endif; ?>
-
-</div><!-- #content -->
 
 <?php wp_footer(); ?>
 </body>

@@ -1,3 +1,16 @@
 header{
     background-color: black;
 }
+
+.navbar_principal{
+    a.nav-link{
+        color: white;
+        font-weight: 600;
+        &:hover{
+            color: $primaryColor;
+        }
+        &.active{
+            color: $primaryColor;
+        }
+    }
+}

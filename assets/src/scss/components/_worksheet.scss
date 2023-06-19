@@ -30,3 +30,25 @@ body{
         }
     }
 }
+
+.pp_table-contents{
+    .nav-link{
+        color:  #0dc1da;
+        &.active{
+            --bs-nav-pills-link-active-bg: #0dc1da;
+            border-radius: 0;
+            color: white;
+            &:after{
+                content: "";
+                position: absolute;
+                left: 100%;
+                top: 50%;
+                margin-top: -13px;
+                border-left: 0;
+                border-bottom: 13px solid transparent;
+                border-top: 13px solid transparent;
+                border-left: 10px solid #0dc1da;
+            }
+        }
+    }
+}

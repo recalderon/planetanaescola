@@ -3,6 +3,7 @@
 
 // 1. Base stuff
 @import
+  'base/typography',
   'base/variables',
   'base/base';
 
@@ -13,12 +14,15 @@
 
 // 3. Components
 @import
+  'components/lightbox',
   'components/buttons',
   'components/documentary',
-  'components/documentary',
   'components/swiper',
-  'components/worksheet';
+  'components/form-pratica',
+  'components/documentary';
 
 // 4. Page-specific styles
 @import
-  'pages/home';
+  'pages/home',
+  'pages/cadastro';
+
