@@ -50,7 +50,7 @@ $length = get_field('duracao');
                     <div class="d-flex flex-row justify-content-center align-items-center  gap-3 w-25">
                         <a class="btn btn-outline pne" href="<?php echo $link ; ?>" data-fancybox="video-gallery">
                             <i class="fa-solid fa-play icone-play-header"></i>
-                            <span class="text-decoration-none fs-5">ASSISTIR</span>
+                            <span class="text-decoration-none fs-5">ASSISTIR AGORA</span>
                         </a>
                     </div>
                     <div class="d-flex flex-row align-items-center gap-4">
