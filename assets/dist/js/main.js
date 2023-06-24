@@ -20,14 +20,15 @@ function handleSwipers() {
 }
 
 function handleDocThumbs() {
-
-  let allDocContent = Array.from(document.querySelectorAll('.doc_content'));
-  allDocContent.forEach(el => {
-    el.addEventListener('mouseenter', (e) => {
-      el.querySelector('.doc_info').classList.remove('visually-hidden')
+  let containerCard = Array.from(document.querySelectorAll('.m-card'))
+  containerCard.forEach(el => {
+    let cover = el.querySelector('.m-cover');
+    cover.addEventListener('mouseenter', (e) => {
+      el.querySelector('.m-content').classList.remove('visually-hidden')
     })
-    el.addEventListener('mouseleave', (e) => {
-      el.querySelector('.doc_info').classList.add('visually-hidden')
+
+    cover.addEventListener('mouseleave', (e) => {
+      el.querySelector('.m-content').classList.add('visually-hidden')
     })
   })
 }

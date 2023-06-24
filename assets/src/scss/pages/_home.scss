@@ -1,48 +1,59 @@
-.home #content{
+.home #content {
     background-color: black;
-}
-
-.informacoes {
-    background-color: rgba(0, 0, 0, 0.9);
 }
 
 .duracao {
     color: #0dc1da
 }
 
-.destaque_helper{
+.destaque_helper {
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.temas_heading{
+.temas_heading {
     color: #FFCC00
 }
 
-.cover-carousel{
-    .doc_thumb{
-        img{
+.cover-carousel {
+    .doc_thumb {
+        img {
             border-radius: 12px;
         }
+
         // &:hover{
         //     &~.doc_info{
         //         display: block;
         //     }
         // }
     }
-    .doc_info{
+
+    .doc_info {
         border-radius: 12px;
         background-color: #0dc1da;
         user-select: none;
-        width: 358,66px;
+        width: 358, 66px;
+
         //display: none;
-        span{
+        span {
             color: black;
         }
 
     }
-    span{
+
+    span {
         color: white
     }
 
+}
+
+.m-card {
+    position: relative;
+    display: block;
+    flex: 1 1 0px;
+    transition: transform 500ms;
+    &:hover{
+        transform: scale(1.15);
+        z-index: 1;
+    }
 }

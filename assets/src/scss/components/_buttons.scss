@@ -35,3 +35,14 @@
         color: $primaryColor;
     }
 }
+
+.pne{
+    &.btn-outline{
+        border: solid 2px $primaryColor;
+        background-color: transparent;
+        color: $primaryColor;
+        i{
+            color: $primaryColor;
+        }
+    }
+}

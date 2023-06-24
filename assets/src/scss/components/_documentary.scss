@@ -1,8 +1,22 @@
 .icone-play{
-    font-size: 5em;
+    font-size: 5rem;
     color: white;
     transition: 300ms;
     &:hover{
-        font-size: 6em;
+        font-size: 6rem;
+    }
+    &-header{
+        font-size: 2rem;
+        color: white;
+    }
+}
+
+#featured-carousel{
+    .swiper{
+        height: 100%;
+    }
+    .informacoes{
+        width: 35%;
+        //background-color: rgba(0, 0, 0, 0.9);
     }
 }

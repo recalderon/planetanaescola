@@ -24,9 +24,9 @@ $length = get_field('duracao');
 ?>
 
 <div class="destaque_container">
-    <div class="destaque_helper" style="background-image: url(<?php echo wp_get_attachment_url( $background) ?>);">
-        <div class="d-flex flex-row justify-content-center py-5">
-            <div class="p-5 text-white w-25 informacoes">
+    <div class="destaque_helper" style="background:linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 35%, rgba(0, 0, 0, 0.27) 56%), url(<?php echo wp_get_attachment_url( $background) ?>); background-position-y: top">
+        <div >
+            <div class="p-5 text-white informacoes">
                 <h1 class="titulo"><?php echo $title ?></h1>
                 <p class="duracao"><?php echo $length . ' minutos'; ?></p>
                 <p class="direcao"><span class="fw-bold label">Direção: </span><?php echo $direction ?></p>
@@ -46,22 +46,25 @@ $length = get_field('duracao');
                 ));
                 ?>
 
-                <div class="d-flex flex-row align-items-center justify-content-between gap-5">
-                    <a href="/adicionar-pratica-pedagogica?docID=<?php echo get_the_ID() ?>" class="text-decoration-none text-white fw-bold">
-                        <i class="fa-solid fa-plus text-center add-pratica "></i>
-                    </a>
-                    <a href="<?php echo get_the_permalink() ?>" class="text-decoration-none fw-bold link-pratica">
-                        <p class="praticas_count m-0">
-                            <i class="bi bi-mortarboard-fill"></i>
-                            <?php echo $pp_query->found_posts ?> PRÁTICAS PEDAGÓGICAS
-                        </p>
-                    </a>
+                <div class="d-flex flex-row align-items-center justify-content-between gap-5 pt-4">
+                    <div class="d-flex flex-row justify-content-center align-items-center  gap-3 w-25">
+                        <a class="btn btn-outline pne" href="<?php echo $link ; ?>" data-fancybox="video-gallery">
+                            <i class="fa-solid fa-play icone-play-header"></i>
+                            <span class="text-decoration-none fs-5">ASSISTIR</span>
+                        </a>
+                    </div>
+                    <div class="d-flex flex-row align-items-center gap-4">
+                        <a href="<?php echo get_the_permalink() ?>" class="text-decoration-none fw-bold link-pratica">
+                            <p class="praticas_count m-0">
+                                <i class="bi bi-mortarboard-fill"></i>
+                                <?php echo $pp_query->found_posts ?> PRÁTICAS PEDAGÓGICAS
+                            </p>
+                        </a>
+                        <a href="/adicionar-pratica-pedagogica?docID=<?php echo get_the_ID() ?>" class="text-decoration-none text-white fw-bold">
+                            <i class="fa-solid fa-plus text-center add-pratica "></i>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="p-5 d-flex flex-column justify-content-center align-items-center w-25">
-                <a href="<?php echo $link ; ?>" data-fancybox="video-gallery">
-                    <i class="fa-regular fa-circle-play icone-play"></i>
-                </a>
             </div>
         </div>
     </div>
@@ -72,5 +75,3 @@ $length = get_field('duracao');
     }?>
 
 </div>
-
-?>

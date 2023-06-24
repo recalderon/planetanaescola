@@ -17,17 +17,21 @@ get_header(); ?>
             $query_args = array(
                 'post_type'   => 'documentario',
                 'posts_per_page' => -1,
-                'meta_query'  => array(
-                    array(
-                        'value'   => '1',
-                        'compare' => 'LIKE',
-                        'key'     => 'documentario_destaque',
-                    ),
-                )
+                // 'meta_query'  => array(
+                //     array(
+                //         'value'   => '1',
+                //         'compare' => 'LIKE',
+                //         'key'     => 'documentario_destaque',
+                //     ),
+                // )
             );
             $query = new WP_Query($query_args);
             if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();  ?>
                     <div class="swiper-slide">
+                        <?php
+                        setup_postdata( $post );
+                        get_template_part('template-parts/documentary', 'slide-header');
+                        ?>
 
                     </div>
                 <?php endwhile; // end of the loop.
